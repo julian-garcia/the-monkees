@@ -1,0 +1,95 @@
+/*Common class and element styles*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Dosis', sans-serif;
+}
+
+p,
+a {
+    font-family: 'Crimson Text', serif;
+}
+
+/*Header section - houses menu, page title and header image */
+
+.header-container {
+    padding: 0;
+}
+
+.band-image {
+    background: url("/assets/images/monkees.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 320px;
+    position: relative;
+}
+
+.main-menu {
+    position: absolute;
+    bottom: 0;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.8);
+    height: 54px;
+    border-top-left-radius: 20px;
+}
+
+.mobile-menu {
+    padding: 0;
+    background: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+.main-menu .nav-link,
+.mobile-menu .nav-link {
+    font-family: 'Dosis', sans-serif;
+    text-transform: uppercase;
+    color: #000;
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: color .5s ease-in-out,
+    text-shadow .5s ease-in-out;
+}
+
+.main-menu .nav-link:hover,
+.mobile-menu .nav-link:hover {
+    color: #ff9000;
+    text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+}
+
+.mobile-menu-icon {
+    color: #fafafa;
+}
+
+.page-title-column {
+    position: relative;
+    background-color: #ff9000;
+    min-height: 170px;
+    text-align: center;
+}
+
+.site-title {
+    font-family: 'Bubblegum Sans', cursive;
+    text-transform: uppercase;
+    width: 100%;
+    position: absolute;
+    top: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.page-title {
+    font-family: 'Dosis', sans-serif;
+    font-size: 62px;
+    text-transform: uppercase;
+    width: 100%;
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+}
