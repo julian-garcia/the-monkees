@@ -5,13 +5,26 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+button {
     font-family: 'Dosis', sans-serif;
 }
 
 p,
-a {
+a,
+input,
+textarea {
     font-family: 'Crimson Text', serif;
+}
+
+a {
+    color: #660000;
+    font-weight: 700;
+}
+
+a:hover {
+    color: #000000;
+    text-decoration: none
 }
 
 /*Header section - houses menu, page title and header image */
@@ -47,19 +60,113 @@ a {
 .mobile-menu .nav-link {
     font-family: 'Dosis', sans-serif;
     text-transform: uppercase;
+    position: relative;
     color: #000;
     font-size: 20px;
     line-height: 40px;
     font-weight: 600;
     letter-spacing: 1px;
-    transition: color .5s ease-in-out,
-    text-shadow .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
 }
 
 .main-menu .nav-link:hover,
 .mobile-menu .nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.6);
     color: #ff9000;
-    text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+}
+
+.main-menu .nav-link:after {
+    opacity: 0;
+    position: absolute;
+    bottom: -10px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #000;
+    content: "";
+    z-index: 5;
+    transition: all .5s ease-in-out;
+    border: 1px solid black;
+}
+
+.main-menu .nav-link--albums:after {
+    background-color: #660000;
+}
+
+.main-menu .nav-link--albums:hover {
+    color: #660000;
+    background-color: rgba(244, 240, 187, 0.6);
+    border-top-left-radius: 20px;
+}
+
+.main-menu .nav-link--albums.active {
+    background-color: #660000;
+    color: #fff;
+    border-top-left-radius: 20px;
+}
+
+.main-menu .nav-link--music:after {
+    background-color: #990033;
+}
+
+.main-menu .nav-link--music:hover {
+    color: #990033;
+    background-color: rgba(135, 195, 143, 0.6);
+}
+
+.main-menu .nav-link--music.active {
+    background-color: #990033;
+    color: #fff;
+}
+
+.main-menu .nav-link--videos:after {
+    background-color: #ff9000;
+}
+
+.main-menu .nav-link--videos:hover {
+    color: #ff9000;
+}
+
+.main-menu .nav-link--videos.active {
+    background-color: #ff9000;
+    color: #fff;
+}
+
+.main-menu .nav-link--book:after {
+    background-color: #87c38f;
+}
+
+.main-menu .nav-link--book:hover {
+    color: #87c38f;
+    background-color: rgba(153, 0, 51, 0.6);
+}
+
+.main-menu .nav-link--book.active {
+    background-color: #87c38f;
+    color: #000;
+}
+
+.main-menu .nav-link--gallery:after {
+    background-color: #f4f0bb;
+}
+
+.main-menu .nav-link--gallery:hover {
+    color: #f4f0bb;
+    background-color: rgba(102, 0, 0, 0.6);
+}
+
+.main-menu .nav-link--gallery.active {
+    background-color: #f4f0bb;
+    color: #000;
+}
+
+.main-menu .nav-link:hover:after {
+    opacity: 1;
 }
 
 .mobile-menu-icon {
@@ -71,6 +178,26 @@ a {
     background-color: #ff9000;
     min-height: 170px;
     text-align: center;
+}
+
+.page-title-column--albums {
+    background-color: #660000;
+    color: #fafafa;
+}
+
+.page-title-column--music {
+    background-color: #990033;
+    color: #fafafa;
+}
+
+.page-title-column--book {
+    background-color: #87c38f;
+    color: #000;
+}
+
+.page-title-column--gallery {
+    background-color: #f4f0bb;
+    color: #000;
 }
 
 .site-title {
@@ -89,7 +216,229 @@ a {
     text-transform: uppercase;
     width: 100%;
     position: absolute;
-    bottom: 32px;
+    bottom: 36px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.social {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.social li {
+    display: inline-block;
+    font-size: 24px;
+    margin: 0;
+    width:15%;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+
+.social i {
+    color: #fafafa;
+}
+
+.page-title-column--gallery .social i {
+    color: #000;
+}
+
+.social li:hover {
+    background-color: #000;
+    border-radius: 10px;
+    color: #fafafa;
+}
+
+.page-title-column--gallery .social li:hover {
+    background-color: #fafafa;
+}
+
+/*Home (video) page - Main section content*/
+
+.video-section {
+    padding: 30px 0;
+    background: url("/assets/images/monkees.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.video-section .overlay {
+    background-color: rgba(0, 0, 0, 0.85);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-section video {
+    -webkit-box-shadow: 0px 0px 28px 10px rgba(255, 144, 0, 1);
+    -moz-box-shadow: 0px 0px 28px 10px rgba(255, 144, 0, 1);
+    box-shadow: 0px 0px 28px 10px rgba(255, 144, 0, 1);
+    opacity: 0.8;
+}
+
+.video-section .headline {
+    background-color: rgba(255, 144, 0, 0.7);
+    margin: -30px 0;
+    padding: 30px 30px 30px 20px;
+    box-sizing: border-box;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 28px;
+}
+
+/*Album page - timeline discography*/
+
+.timeline {
+    padding: 20px 0;
+    margin: 0;
+}
+
+.timeline h3,
+.timeline h4 {
+    color: #660000;
+}
+
+.timeline h5 {
+    margin: 0;
+}
+
+.timeline i {
+    color: #660000;
+    font-size: 26px;
+    position: absolute;
+    left: -14px;
+    top: 20%;
+}
+
+.timeline .item-right i {
+    left: -3px;
+}
+
+.timeline .item-left i {
+    right: -3px;
+}
+
+.timeline .item-right {
+    position: relative;
+    box-sizing: border-box;
+    margin: 0 0 0 calc(50% - 3px);
+    padding: 0 20px 0 30px;
+    border-left: 3px dotted #660000;
+    width: 50%;
+    background-color: #fff;
+    border-top: 2px solid #e1e1e1;
+    border-right: 2px solid #e1e1e1;
+    border-bottom: 2px solid #e1e1e1;
+}
+
+.timeline .item-right:before {
+    background-color: #f4f0bb;
+}
+
+.timeline .item-left {
+    position: relative;
+    box-sizing: border-box;
+    margin: 0 50% 0 0;
+    padding: 0 30px 0 20px;
+    text-align: right;
+    border-right: 3px dotted #660000;
+    width: 50%;
+}
+
+.timeline .item-left:before {
+    background-color: #f4f0bb;
+}
+
+/*Music section carousel*/
+
+.carousel {
+    background-color: #990033;
+}
+
+.carousel-item {
+    padding-top: 30px;
+    height: 150px;
+}
+
+.carousel-item audio {
+    margin: 0 auto;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (min-width:450px) {
+    .music-footer {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .carousel {
+        background-color: rgba(153, 0, 51, 0.5);
+    }
+
+    .music-section {
+        background: url('/assets/images/monkees-music.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: calc(100vh - 320px);
+    }
+}
+
+/*Book Us*/
+
+.book-event-column {
+    background-color: #87c38f;
+    padding: 20px 30px;
+}
+
+.book-form-column {
+    padding: 0 20px;
+    margin: 20px 0;
+}
+
+.book-form-column input {
+    margin-bottom: 20px;
+}
+
+.book-button {
+    width: 100%;
+    background-color: #87c38f;
+    border: 2px solid transparent;
+    color: #000;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+
+.book-button:hover {
+    background-color: #fafafa;
+    color: #000;
+    border: 2px solid #000;
+}
+
+/*Gallery section*/
+
+.gallery-section {
+    margin: 30px 0;
+}
+
+.gallery-section img:hover {
+    cursor: pointer;
+}
+
+footer {
+    padding: 10px 0;
+    background-color: #ff9000;
+    text-align: center;
 }

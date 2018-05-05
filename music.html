@@ -20,8 +20,8 @@
                 <div class="band-image">
                     <nav class="nav nav-fill main-menu justify-content-center col-12 col-xl-9 offset-xl-3 d-none d-sm-inline-flex">
                         <a class="nav-item nav-link nav-link--albums" href="albums.html">Albums</a>
-                        <a class="nav-item nav-link nav-link--music" href="music.html">Music</a>
-                        <a class="nav-item nav-link nav-link--videos active" href="index.html">Videos</a>
+                        <a class="nav-item nav-link nav-link--music active" href="music.html">Music</a>
+                        <a class="nav-item nav-link nav-link--videos" href="index.html">Videos</a>
                         <a class="nav-item nav-link nav-link--book" href="book.html">Book Us</a>
                         <a class="nav-item nav-link nav-link--gallery" href="gallery.html">Gallery</a>
                     </nav>
@@ -41,9 +41,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4 page-title-column p-0 ">
+            <div class="col-12 col-md-4 page-title-column page-title-column--music p-0 ">
                 <h2 class="site-title">The Monkees</h2>
-                <h1 class="page-title">Videos</h1>
+                <h1 class="page-title">Music</h1>
                 <ul class="social">
                     <a href="mailto:"><li><i class="fab fa-facebook-f"></i></li></a>
                     <a href="mailto:"><li><i class="fab fa-twitter"></i></li></a>
@@ -54,26 +54,58 @@
         </div>
     </header>
     <main class="container-fluid pl-0 pr-0">
-        <section class="video-section">
-            <div class="overlay"></div>
+        <section class="music-section">
             <div class="row d-flex">
-                <div class="col-12 col-md-6 col-lg-6 offset-lg-2 p-0">
-                    <video width="100%" height="auto" poster="assets/images/monkees.jpg" controls>
-                        <source src="assets/videos/TheMonkees.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 headline">
-                    <h2>Musical acting quartet</h2>
-                    <h4>Micky Dolenz</h4>
-                    <h4>Michael Nesmith</h4>
-                    <h4>Peter Tork</h4>
-                    <h4>Davy Jones</h4>
+                <div class="col-12 col-lg-8 col-xl-6 offset-xl-2 p-0">
+                    <div id="carouselMusic" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselMusic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselMusic" data-slide-to="1"></li>
+                            <li data-target="#carouselMusic" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <audio controls class="d-block">
+                                  <source src="assets/audio/Clarksville.mp3" type="audio/mpeg">
+                                  Your browser does not support the audio tag.
+                                </audio>
+                                <div class="carousel-caption d-block">
+                                    <h5>Clarksville</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <audio controls>
+                                  <source src="assets/audio/DaydreamBeliever.mp3" type="audio/mpeg">
+                                  Your browser does not support the audio tag.
+                                </audio>
+                                <div class="carousel-caption d-block">
+                                    <h5>Daydream Believer</h5>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <audio controls>
+                                  <source src="assets/audio/SteppingStone.mp3" type="audio/mpeg">
+                                  Your browser does not support the audio tag.
+                                </audio>
+                                <div class="carousel-caption d-block">
+                                    <h5>Stepping Stone</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselMusic" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselMusic" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="container-fluid">
+    <footer class="container-fluid music-footer">
         <div class="row">
             <div class="col-12">
                 <h5>&copy; <span id="footer-year"></span> | The Monkees

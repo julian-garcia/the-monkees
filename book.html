@@ -21,8 +21,8 @@
                     <nav class="nav nav-fill main-menu justify-content-center col-12 col-xl-9 offset-xl-3 d-none d-sm-inline-flex">
                         <a class="nav-item nav-link nav-link--albums" href="albums.html">Albums</a>
                         <a class="nav-item nav-link nav-link--music" href="music.html">Music</a>
-                        <a class="nav-item nav-link nav-link--videos active" href="index.html">Videos</a>
-                        <a class="nav-item nav-link nav-link--book" href="book.html">Book Us</a>
+                        <a class="nav-item nav-link nav-link--videos" href="index.html">Videos</a>
+                        <a class="nav-item nav-link nav-link--book active" href="book.html">Book Us</a>
                         <a class="nav-item nav-link nav-link--gallery" href="gallery.html">Gallery</a>
                     </nav>
                     <nav class="navbar  d-block d-sm-none text-right">
@@ -41,9 +41,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4 page-title-column p-0 ">
+            <div class="col-12 col-md-4 page-title-column page-title-column--book p-0 ">
                 <h2 class="site-title">The Monkees</h2>
-                <h1 class="page-title">Videos</h1>
+                <h1 class="page-title">Book Us</h1>
                 <ul class="social">
                     <a href="mailto:"><li><i class="fab fa-facebook-f"></i></li></a>
                     <a href="mailto:"><li><i class="fab fa-twitter"></i></li></a>
@@ -53,22 +53,68 @@
             </div>
         </div>
     </header>
-    <main class="container-fluid pl-0 pr-0">
-        <section class="video-section">
-            <div class="overlay"></div>
-            <div class="row d-flex">
-                <div class="col-12 col-md-6 col-lg-6 offset-lg-2 p-0">
-                    <video width="100%" height="auto" poster="assets/images/monkees.jpg" controls>
-                        <source src="assets/videos/TheMonkees.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+    <main class="container-fluid">
+        <section class="book-section">
+            <div class="row">
+                <div class="col-12 col-md-4 book-event-column order-2 order-md-1">
+                    <h2 class="mb-4">Upcoming Events</h3>
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-12 col-xl-6 mb-3">
+                            <h4>Event One</h4>
+                            <h6>1st Jan 2018</h6>
+                            <p>Wembley Stadium</p>
+                            <a href="#">Tickets</a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-12 col-xl-6 mb-3">
+                            <h4>Event Two</h4>
+                            <h6>1st Feb 2018</h6>
+                            <p>Barbican</p>
+                            <a href="#">Tickets</a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-12 col-xl-6 mb-3">
+                            <h4>Event Three</h4>
+                            <h6>1st Mar 2018</h6>
+                            <p>Wembley Stadium</p>
+                            <a href="#">Tickets</a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-12 col-xl-6 mb-3">
+                            <h4>Event Four</h4>
+                            <h6>1st Apr 2018</h6>
+                            <p>Barbican</p>
+                            <a href="#">Tickets</a>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-12 col-xl-6 mb-3">
+                            <h4>Event Five</h4>
+                            <h6>1st May 2018</h6>
+                            <p>Barbican</p>
+                            <a href="#">Tickets</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-4 headline">
-                    <h2>Musical acting quartet</h2>
-                    <h4>Micky Dolenz</h4>
-                    <h4>Michael Nesmith</h4>
-                    <h4>Peter Tork</h4>
-                    <h4>Davy Jones</h4>
+                <div class="col-12 col-md-8 book-form-column order-1 order-md-2">
+                    <h2 class="mb-4">Book Us</h3>
+                    <form>
+                        <div class="form-row">
+                            <div class="col-12 col-sm-6">
+                                <input type="email" class="form-control" id="emailaddress" placeholder="Email address" required>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="text" class="form-control" id="name" placeholder="Full name" required>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="date" class="form-control" id="date" placeholder="Date" required>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="time" class="form-control" id="time" placeholder="Time" required>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <textarea class="form-control" id="message" rows="3" placeholder="Enter any further details" required></textarea>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <button class="btn btn-primary btn-lg book-button" type="submit" required>Submit my booking</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>

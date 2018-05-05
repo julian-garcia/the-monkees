@@ -19,9 +19,9 @@
             <div class="col-12 col-md-8 p-0">
                 <div class="band-image">
                     <nav class="nav nav-fill main-menu justify-content-center col-12 col-xl-9 offset-xl-3 d-none d-sm-inline-flex">
-                        <a class="nav-item nav-link nav-link--albums" href="albums.html">Albums</a>
+                        <a class="nav-item nav-link nav-link--albums active" href="albums.html">Albums</a>
                         <a class="nav-item nav-link nav-link--music" href="music.html">Music</a>
-                        <a class="nav-item nav-link nav-link--videos active" href="index.html">Videos</a>
+                        <a class="nav-item nav-link nav-link--videos" href="index.html">Videos</a>
                         <a class="nav-item nav-link nav-link--book" href="book.html">Book Us</a>
                         <a class="nav-item nav-link nav-link--gallery" href="gallery.html">Gallery</a>
                     </nav>
@@ -41,9 +41,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4 page-title-column p-0 ">
+            <div class="col-12 col-md-4 page-title-column page-title-column--albums p-0 ">
                 <h2 class="site-title">The Monkees</h2>
-                <h1 class="page-title">Videos</h1>
+                <h1 class="page-title">Albums</h1>
                 <ul class="social">
                     <a href="mailto:"><li><i class="fab fa-facebook-f"></i></li></a>
                     <a href="mailto:"><li><i class="fab fa-twitter"></i></li></a>
@@ -54,21 +54,35 @@
         </div>
     </header>
     <main class="container-fluid pl-0 pr-0">
-        <section class="video-section">
-            <div class="overlay"></div>
-            <div class="row d-flex">
-                <div class="col-12 col-md-6 col-lg-6 offset-lg-2 p-0">
-                    <video width="100%" height="auto" poster="assets/images/monkees.jpg" controls>
-                        <source src="assets/videos/TheMonkees.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 headline">
-                    <h2>Musical acting quartet</h2>
-                    <h4>Micky Dolenz</h4>
-                    <h4>Michael Nesmith</h4>
-                    <h4>Peter Tork</h4>
-                    <h4>Davy Jones</h4>
+        <section class="albums-section">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12 col-md-8 p-0">
+                    <div class="timeline">
+                        <div class="hvr-shutter-out-horizontal item-right" >
+                            <i class="fas fa-arrow-right"></i>
+                            <h3>The Monkees</h3>
+                            <h4>Released: October 1966</h4>
+                            <h5><a href="#">Purchase</a></h5>
+                        </div>
+                        <div class="hvr-shutter-out-horizontal item-left" >
+                            <i class="fas fa-arrow-left"></i>
+                            <h3>More of the Monkees</h3>
+                            <h4>Released: January 1967</h4>
+                            <h5><a href="#">Purchase</a></h5>
+                        </div>
+                        <div class="hvr-shutter-out-horizontal item-right" >
+                            <i class="fas fa-arrow-right"></i>
+                            <h3>Headquarters</h3>
+                            <h4>Released: May 1967</h4>
+                            <h5><a href="#">Purchase</a></h5>
+                        </div>
+                        <div class="hvr-shutter-out-horizontal item-left" >
+                            <i class="fas fa-arrow-left"></i>
+                            <h3>Instant Replay</h3>
+                            <h4>Released: February 1969</h4>
+                            <h5><a href="#">Purchase</a></h5>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -77,10 +91,9 @@
         <div class="row">
             <div class="col-12">
                 <h5>&copy; <span id="footer-year"></span> | The Monkees
-                    <script type="text/javascript">
-                        document.getElementById("footer-year").innerHTML = new Date().getFullYear();
-                    </script>
-                </h5>
+                <script type="text/javascript">
+                    document.getElementById("footer-year").innerHTML = new Date().getFullYear();
+                </script></h5>
             </div>
         </div>
     </footer>
