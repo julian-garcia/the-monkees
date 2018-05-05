@@ -34,7 +34,7 @@ a:hover {
 }
 
 .band-image {
-    background: url("/assets/images/monkees.jpg");
+    background: url("../images/monkees.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 320px;
@@ -265,7 +265,7 @@ a:hover {
 
 .video-section {
     padding: 30px 0;
-    background: url("/assets/images/monkees.jpg");
+    background: url("../images/monkees.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -387,7 +387,7 @@ a:hover {
     }
 
     .music-section {
-        background: url('/assets/images/monkees-music.jpg');
+        background: url('../images/monkees-music.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         min-height: calc(100vh - 320px);
