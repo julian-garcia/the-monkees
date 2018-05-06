@@ -27,6 +27,11 @@ a:hover {
     text-decoration: none
 }
 
+body, html {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 /*Header section - houses menu, page title and header image */
 
 .header-container {
