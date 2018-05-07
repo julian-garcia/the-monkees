@@ -9,11 +9,12 @@ availability to perform at events such as weddings and Christmas parties.
 ## Languages and Frameworks Used
     HTML5, CSS3, Bootstrap v4.1.1,
     Hover.css Javascript CDN,
-    Fontawesome, Google Fonts
+    Fontawesome, Google Fonts, Colour scheme to determine a colour 
 
 ## Development Method
-Pre development wireframes were created using Balsamiq (see Wireframes.pdf)
+Pre development wireframes were created using Balsamiq (see [wireframes.pdf](wireframes.pdf))
 The site was developed in Cloud9 within an Ubuntu based workspace using a mobile 
 first approach. To ensure responsiveness of the site all changes were tested 
 using Responsive Design Mode in Safari. Having commited all changes to git, the 
-site was deployed to Github. 
+site was deployed to Github. Website [coolors.co](https://coolors.co) was used to determine a colour 
+scheme that uses complementary colours (see [palette.pdf](palette.pdf)).

@@ -27,9 +27,19 @@ a:hover {
     text-decoration: none
 }
 
-body, html {
+body,
+html {
     width: 100vw;
+    height: 100%;
     overflow-x: hidden;
+}
+
+main {
+    min-height: calc(100% - 370px);
+}
+
+section {
+    min-height: calc(100% - 370px);
 }
 
 /*Header section - houses menu, page title and header image */
@@ -44,6 +54,14 @@ body, html {
     background-size: cover;
     height: 320px;
     position: relative;
+}
+
+.home-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
 
 .main-menu {
@@ -241,7 +259,7 @@ body, html {
     display: inline-block;
     font-size: 24px;
     margin: 0;
-    width:15%;
+    width: 15%;
     transition: all .5s ease-in-out;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
@@ -274,6 +292,7 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    min-height: calc(100vh - 370px);
 }
 
 .video-section .overlay {
@@ -304,6 +323,7 @@ body, html {
 @media (min-width:768px) {
     .video-section .headline {
         margin: -30px 0;
+        min-height: calc(100vh - 370px);
     }
 }
 
@@ -343,7 +363,7 @@ body, html {
     position: relative;
     box-sizing: border-box;
     margin: 0 0 0 calc(50% - 3px);
-    padding: 0 20px 0 30px;
+    padding: 10px 20px 10px 30px;
     border-left: 3px dotted #660000;
     width: 50%;
     background-color: #fff;
@@ -360,7 +380,7 @@ body, html {
     position: relative;
     box-sizing: border-box;
     margin: 0 50% 0 0;
-    padding: 0 30px 0 20px;
+    padding: 10px 30px 10px 20px;
     text-align: right;
     border-right: 3px dotted #660000;
     width: 50%;
@@ -372,28 +392,42 @@ body, html {
 
 /*Music section carousel*/
 
-.carousel {
+.music-section .nav {
+    margin-top: 30px;
+}
+
+.music-section .tab-content {
     background-color: #990033;
 }
 
-.carousel-item {
+.music-section .tab-pane {
     padding-top: 30px;
     height: 150px;
 }
 
-.carousel-item audio {
+.music-section .tab-pane audio {
     margin: 0 auto;
     margin-left: 50%;
     transform: translateX(-50%);
 }
 
-@media (min-width:450px) {
-    .music-footer {
-        position: absolute;
-        bottom: 0;
-    }
+.music-section .nav-item {
+    background-color: rgba(255, 255, 255, 0.5);
+}
 
-    .carousel {
+.music-section .nav-item .active {
+    background-color: rgba(153, 0, 51, 0.5);
+    color: #fff;
+}
+
+.music-section .nav-item a {
+    font-family: 'Dosis', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+@media (min-width:450px) {
+    .music-section .tab-content {
         background-color: rgba(153, 0, 51, 0.5);
     }
 
@@ -401,7 +435,7 @@ body, html {
         background: url('../images/monkees-music.jpg');
         background-repeat: no-repeat;
         background-size: cover;
-        min-height: calc(100vh - 320px);
+        min-height: calc(100vh - 370px);
     }
 }
 
@@ -412,12 +446,24 @@ body, html {
     padding: 20px 30px;
 }
 
+.book-event-column p {
+    margin-bottom: 0;
+}
+
+.book-event-column a, .timeline a {
+    font-family: 'Dosis', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
 .book-form-column {
+    text-align: center;
     padding: 0 20px;
     margin: 20px 0;
 }
 
-.book-form-column input {
+.book-form-column input, .book-form-column textarea {
     margin-bottom: 20px;
 }
 
@@ -441,7 +487,7 @@ body, html {
 /*Gallery section*/
 
 .gallery-section {
-    margin: 30px 0;
+    padding-top: 30px;
 }
 
 .gallery-section img:hover {
@@ -450,6 +496,7 @@ body, html {
 
 footer {
     padding: 10px 0;
+    height: 50px;
     background-color: #ff9000;
     text-align: center;
 }

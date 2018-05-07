@@ -18,6 +18,7 @@
         <div class="row">
             <div class="col-12 col-md-8 p-0">
                 <div class="band-image">
+                    <a href="index.html" class="home-link"></a>
                     <nav class="nav nav-fill main-menu justify-content-center col-12 col-xl-9 offset-xl-3 d-none d-sm-inline-flex">
                         <a class="nav-item nav-link nav-link--albums" href="albums.html">Albums</a>
                         <a class="nav-item nav-link nav-link--music active" href="music.html">Music</a>
@@ -45,10 +46,18 @@
                 <h2 class="site-title">The Monkees</h2>
                 <h1 class="page-title">Music</h1>
                 <ul class="social">
-                    <a href="mailto:"><li><i class="fab fa-facebook-f"></i></li></a>
-                    <a href="mailto:"><li><i class="fab fa-twitter"></i></li></a>
-                    <a href="mailto:"><li><i class="fab fa-youtube"></i></li></a>
-                    <a href="mailto:"><li><i class="fab fa-instagram"></i></li></a>
+                    <a href="https://www.facebook.com/TheMonkees" target="_blank">
+                        <li><i class="fab fa-facebook-f"></i></li>
+                    </a>
+                    <a href="https://twitter.com/TheMonkees" target="_blank">
+                        <li><i class="fab fa-twitter"></i></li>
+                    </a>
+                    <a href="https://www.youtube.com/user/themonkees" target="_blank">
+                        <li><i class="fab fa-youtube"></i></li>
+                    </a>
+                    <a href="https://www.instagram.com/themonkees/" target="_blank">
+                        <li><i class="fab fa-instagram"></i></li>
+                    </a>
                 </ul>
             </div>
         </div>
@@ -57,49 +66,45 @@
         <section class="music-section">
             <div class="row d-flex">
                 <div class="col-12 col-lg-8 col-xl-6 offset-xl-2 p-0">
-                    <div id="carouselMusic" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselMusic" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselMusic" data-slide-to="1"></li>
-                            <li data-target="#carouselMusic" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <audio controls class="d-block">
-                                  <source src="assets/audio/Clarksville.mp3" type="audio/mpeg">
-                                  Your browser does not support the audio tag.
-                                </audio>
-                                <div class="carousel-caption d-block">
-                                    <h5>Clarksville</h5>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <audio controls>
-                                  <source src="assets/audio/DaydreamBeliever.mp3" type="audio/mpeg">
-                                  Your browser does not support the audio tag.
-                                </audio>
-                                <div class="carousel-caption d-block">
-                                    <h5>Daydream Believer</h5>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <audio controls>
-                                  <source src="assets/audio/SteppingStone.mp3" type="audio/mpeg">
-                                  Your browser does not support the audio tag.
-                                </audio>
-                                <div class="carousel-caption d-block">
-                                    <h5>Stepping Stone</h5>
-                                </div>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Clarksville</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Daydream Believer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Stepping Stone</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <audio controls class="d-block">
+                              <source src="assets/audio/Clarksville.mp3" type="audio/mpeg">
+                              Your browser does not support the audio tag.
+                            </audio>
+                            <div class="carousel-caption d-block">
+                                <h5>Clarksville</h5>
                             </div>
                         </div>
-                        <a class="carousel-control-prev" href="#carouselMusic" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselMusic" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <audio controls>
+                              <source src="assets/audio/DaydreamBeliever.mp3" type="audio/mpeg">
+                              Your browser does not support the audio tag.
+                            </audio>
+                            <div class="carousel-caption d-block">
+                                <h5>Daydream Believer</h5>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                            <audio controls>
+                              <source src="assets/audio/SteppingStone.mp3" type="audio/mpeg">
+                              Your browser does not support the audio tag.
+                            </audio>
+                            <div class="carousel-caption d-block">
+                                <h5>Stepping Stone</h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
