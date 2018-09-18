@@ -1,3 +1,9 @@
+/************************************************
+   Stylesheet: The Monkees pure html/css website
+   Author: Julian Garcia
+   Date: 18 Sep 2018
+ ************************************************/
+
 /* Basic and html element styling */
 
 h1,
@@ -27,6 +33,7 @@ a:hover {
     text-decoration: none
 }
 
+/* Prevent scroll overflow on smaller devices */
 body,
 html {
     width: 100vw;
@@ -42,14 +49,15 @@ section {
     min-height: calc(100% - 370px);
 }
 
-/*Home page - Main section content*/
+/* Home page */
 
 .home-section {
     padding: 20px 0 0 0;
     min-height: calc(100vh - 300px);
 }
 
-/* Ensure the home page band members are displayed uniformly */
+/* Ensure the home page band members are displayed uniformly
+   and adjust well to various screen sizes                   */
 
 .home-section .home-img-col {
     background-repeat: no-repeat;
@@ -97,7 +105,8 @@ section {
     text-align: center;
 }
 
-/* Vary the navigation menu according to mobile or desktop */
+/* For mobile, move the navigation menu to the very top of the screen
+   to facilitate overall site accessibility on smaller devices */
 
 .navbar--mobile {
     position: fixed;
@@ -138,11 +147,15 @@ section {
   color: #fff;
 }
 
-/*Header section - houses menu, page title and header image */
+/* Header section - houses: menu, page title and header image */
 
 .header-container {
     padding: 0;
 }
+
+/* The header image is hidden on smaller devices to avoid
+   pushing content down below the viewable portion of each
+   page when the site initially loads */
 
 .band-image {
     height: 0px;
@@ -164,6 +177,10 @@ section {
     height: 260px;
   }
 }
+
+/* Vary the menu styling according to device. Bootstrap takes care
+   of showing hiding the desktop/mobile menu according to screen size
+   of the device */
 
 .main-menu {
     position: absolute;
@@ -306,6 +323,8 @@ section {
     line-height: 1.5em;
 }
 
+/* Righthand section of the header showing site and page title and social media links */
+
 .page-title-column {
     position: relative;
     background-color: #ff9000;
@@ -406,7 +425,7 @@ section {
     background-color: #fafafa;
 }
 
-/*Album page - timeline discography*/
+/* Album page - timeline discography */
 
 .timeline {
     padding: 20px 0;
@@ -469,7 +488,7 @@ section {
     background-color: #f4f0bb;
 }
 
-/*Music section carousel*/
+/* Music section listing - audio and video */
 
 .music-section  {
     padding: 20px 30px;
@@ -495,7 +514,7 @@ section {
     }
 }
 
-/*Book Us*/
+/* Book Us - basic styling for the gig booking form */
 
 .book-event-column {
     background-color: #87c38f;
@@ -540,7 +559,7 @@ section {
     border: 2px solid #000;
 }
 
-/*Gallery section*/
+/* Gallery section */
 
 .gallery-section {
     padding-top: 30px;
