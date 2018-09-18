@@ -1,4 +1,4 @@
-/*Common class and element styles*/
+/* Basic and html element styling */
 
 h1,
 h2,
@@ -42,6 +42,102 @@ section {
     min-height: calc(100% - 370px);
 }
 
+/*Home page - Main section content*/
+
+.home-section {
+    padding: 20px 0 0 0;
+    min-height: calc(100vh - 300px);
+}
+
+/* Ensure the home page band members are displayed uniformly */
+
+.home-section .home-img-col {
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    background-position: center left;
+    max-width: 80%;
+    height: 250px;
+    border: 5px solid white;
+    border-radius: 20px;
+    margin: 5.5rem 10% 1rem 10%;
+}
+
+@media (min-width: 576px) {
+    .home-section .home-img-col {
+        height: 280px;
+        margin: 5.5rem 0 1rem 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .home-section .home-img-col {
+        height: 200px;
+    }
+}
+
+.home-section .home-img-col--pt {
+    background: url("../images/pt.jpg");
+}
+
+.home-section .home-img-col--md {
+    background: url("../images/md.jpg");
+}
+
+.home-section .home-img-col--dj {
+    background: url("../images/dj.jpg");
+    background-position: left top;
+}
+
+.home-section .home-img-col--mn {
+    background: url("../images/mn.jpg");
+}
+
+.home-section .band-member-title {
+    margin-top: -4rem;
+    text-align: center;
+}
+
+/* Vary the navigation menu according to mobile or desktop */
+
+.navbar--mobile {
+    position: fixed;
+    top:0px;
+    right: 0px;
+    z-index: 999;
+    padding: 5px;
+}
+
+.navbar--mobile button {
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid black;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    margin: 0;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+
+.navbar--mobile i {
+    color: #000;
+    background-color: transparent;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+
+.navbar--mobile button:hover {
+  background-color: #000;
+}
+
+.navbar--mobile button:hover i {
+  color: #fff;
+}
+
 /*Header section - houses menu, page title and header image */
 
 .header-container {
@@ -49,34 +145,45 @@ section {
 }
 
 .band-image {
-    background: url("../images/monkees.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 320px;
+    height: 0px;
     position: relative;
 }
 
-.home-link {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+@media (min-width:576px) {
+  .band-image {
+    height: 50px;
+  }
+}
+
+@media (min-width:768px) {
+  .band-image {
+    background: url("../images/monkees.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    height: 260px;
+  }
 }
 
 .main-menu {
     position: absolute;
-    bottom: 0;
+    top: 0;
     padding: 0;
     background: rgba(255, 255, 255, 0.8);
     height: 54px;
     border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 .mobile-menu {
     padding: 0;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(225, 225, 225, 0.95);
     text-align: center;
+    position: fixed;
+    top:0px;
+    right:0px;
+    left:0px;
+    z-index: 99;
 }
 
 .main-menu .nav-link,
@@ -125,12 +232,14 @@ section {
     color: #660000;
     background-color: rgba(244, 240, 187, 0.6);
     border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 .main-menu .nav-link--albums.active {
     background-color: #660000;
     color: #fff;
     border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 .main-menu .nav-link--music:after {
@@ -194,6 +303,7 @@ section {
 
 .mobile-menu-icon {
     color: #fafafa;
+    line-height: 1.5em;
 }
 
 .page-title-column {
@@ -270,61 +380,30 @@ section {
     color: #fafafa;
 }
 
+/* Expand the social links to the size of their parent list item
+   so that the link is active when hovering the entire list item
+   rather than only when hovering over the social icon           */
+
+.social li a {
+  display: block;
+}
+
 .page-title-column--gallery .social i {
     color: #000;
 }
 
 .social li:hover {
-    background-color: #000;
+    background-color: #fafafa;
     border-radius: 10px;
-    color: #fafafa;
+    color: #000;
+}
+
+.social li:hover i {
+  color: #000;
 }
 
 .page-title-column--gallery .social li:hover {
     background-color: #fafafa;
-}
-
-/*Home (video) page - Main section content*/
-
-.video-section {
-    padding: 30px 0;
-    background: url("../images/monkees.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    min-height: calc(100vh - 370px);
-}
-
-.video-section .overlay {
-    background-color: rgba(0, 0, 0, 0.85);
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.video-section video {
-    -webkit-box-shadow: 0px 0px 28px 10px rgba(255, 144, 0, 1);
-    -moz-box-shadow: 0px 0px 28px 10px rgba(255, 144, 0, 1);
-    box-shadow: 0px 0px 28px 10px rgba(255, 144, 0, 1);
-    opacity: 0.8;
-}
-
-.video-section .headline {
-    background-color: rgba(255, 144, 0, 0.7);
-    margin-top: -5px;
-    padding: 30px 30px 30px 20px;
-    box-sizing: border-box;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 28px;
-}
-
-@media (min-width:768px) {
-    .video-section .headline {
-        margin: -30px 0;
-        min-height: calc(100vh - 370px);
-    }
 }
 
 /*Album page - timeline discography*/
@@ -392,50 +471,27 @@ section {
 
 /*Music section carousel*/
 
-.music-section .nav {
-    margin-top: 30px;
+.music-section  {
+    padding: 20px 30px;
 }
 
-.music-section .tab-content {
-    background-color: #990033;
+.music-section .list-group-item:nth-child(odd) {
+  background-color: #f0f0f0;
 }
 
-.music-section .tab-pane {
-    padding-top: 30px;
-    height: 150px;
+.music-section .list-group-item i,
+.music-section .list-group-item h5  {
+    color:#990033;
 }
 
-.music-section .tab-pane audio {
-    margin: 0 auto;
-    margin-left: 50%;
-    transform: translateX(-50%);
-}
-
-.music-section .nav-item {
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-.music-section .nav-item .active {
-    background-color: rgba(153, 0, 51, 0.5);
-    color: #fff;
-}
-
-.music-section .nav-item a {
-    font-family: 'Dosis', sans-serif;
-    font-size: 22px;
-    font-weight: 400;
+.music-section .list-group-item:hover i,
+.music-section .list-group-item:hover h5 {
+    color: #ff9000;
 }
 
 @media (min-width:450px) {
-    .music-section .tab-content {
-        background-color: rgba(153, 0, 51, 0.5);
-    }
-
     .music-section {
-        background: url('../images/monkees-music.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        min-height: calc(100vh - 370px);
+        min-height: calc(100vh - 300px);
     }
 }
 
