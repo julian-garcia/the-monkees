@@ -16,17 +16,15 @@
 <body>
     <header class="container-fluid header-container">
         <div class="row">
-            <!-- Order adjustments: On smaller screens move the navigation menu
-                 just below the title so that the user is aware of the page they're
-                 currently visiting -->
+            
             <div class="order-2 order-md-1 col-12 col-md-8 p-0">
                 <div class="band-image">
                     <nav class="nav nav-fill main-menu justify-content-center col-12 col-xl-9 offset-xl-3 d-none d-sm-inline-flex">
                         <a class="nav-item nav-link nav-link--albums" href="albums.html">Albums</a>
-                        <a class="nav-item nav-link nav-link--music active" href="music.html">Music</a>
-                        <a class="nav-item nav-link nav-link--videos" href="index.html">Home</a>
-                        <a class="nav-item nav-link nav-link--book" href="book.html">Book Us</a>
-                        <a class="nav-item nav-link nav-link--gallery" href="gallery.html">Gallery</a>
+                        <a class="nav-item nav-link active" href="music.html">Music</a>
+                        <a class="nav-item nav-link" href="index.html">Home</a>
+                        <a class="nav-item nav-link" href="book.html">Book Us</a>
+                        <a class="nav-item nav-link" href="gallery.html">Gallery</a>
                     </nav>
                     <nav class="navbar  d-block d-sm-none text-right navbar--mobile">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggle-mobile-menu" aria-controls="toggle-mobile-menu" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,9 +42,8 @@
                     </div>
                 </div>
             </div>
-            <!-- Order adjustments: On smaller screens move the title to the top so
-                 that the user is aware of the page they're currently visiting -->
-            <div class="order-1 order-md-2 col-12 col-md-4 page-title-column page-title-column--music p-0">
+
+            <div class="order-1 order-md-2 col-12 col-md-4 page-title-column p-0">
                 <h2 class="site-title">The Monkees</h2>
                 <h1 class="page-title">Music</h1>
                 <ul class="social">
@@ -74,28 +71,50 @@
             </div>
         </div>
     </header>
+
     <main class="container-fluid pl-0 pr-0">
         <section class="music-section">
             <div class="row d-flex">
-                <div class="col-12 col-lg-8 col-xl-6 offset-xl-2 p-0">
-                    <div class="list-group">
-                      <a href="assets/videos/TheMonkees.mp4" target="_blank" class="list-group-item list-group-item-action">
-                        <h5>Daydream Believer (video) <i class="fas fa-download"></i></h5>
-                      </a>
-                      <a href="assets/audio/Clarksville.mp3" target="_blank" class="list-group-item list-group-item-action">
-                        <h5>Clarksville (audio) <i class="fas fa-download"></i></h5>
-                      </a>
-                      <a href="assets/audio/DaydreamBeliever.mp3" target="_blank" class="list-group-item list-group-item-action">
-                        <h5>Daydream Believer (audio) <i class="fas fa-download"></i></h5>
-                      </a>
-                      <a href="assets/audio/SteppingStone.mp3" target="_blank" class="list-group-item list-group-item-action">
-                        <h5>Stepping Stone (audio) <i class="fas fa-download"></i></h5>
-                      </a>
+                <div class="col-12 col-lg-6 col-xl-6 p-0">
+                    <div class="video-container py-2 text-center">
+                        <i class="fas fa-video video-icon"></i>
+                        <h2 class="text-center">Daydream Believer</h2>
+                        <video controls poster="assets/images/logo.png">
+                            <source src="assets/videos/TheMonkees.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-6 px-4">
+                    <i class="fas fa-volume-up audio-icon"></i>
+                    <div class="audio-container text-center">
+                        <h3>Clarksville</h3>
+                        <audio controls src="assets/audio/Clarksville.mp3">
+                            Your browser does not support the
+                            <code>audio</code> element.
+                        </audio>
+                    </div>
+                    <hr>
+                    <div class="audio-container text-center">
+                        <h3>Daydream Believer</h3>
+                        <audio controls src="assets/audio/DaydreamBeliever.mp3">
+                            Your browser does not support the
+                            <code>audio</code> element.
+                        </audio>
+                    </div>
+                    <hr>
+                    <div class="audio-container text-center">
+                        <h3>Stepping Stone</h3>
+                        <audio controls src="assets/audio/SteppingStone.mp3">
+                            Your browser does not support the
+                            <code>audio</code> element.
+                        </audio>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
     <footer class="container-fluid music-footer">
         <div class="row">
             <div class="col-12">
@@ -107,9 +126,25 @@
             </div>
         </div>
     </footer>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    <!-- In order to enforce one track/video to be playing at any one time we need    -->
+    <!-- to use Javascript to loop through all audio/video elements and stop anything -->
+    <!-- else that is already playing                                                 -->
+    <script>
+        document.addEventListener('play', function(e){
+            var media = document.querySelectorAll('video, audio');
+            console.log(media);
+            for(var i = 0, len = media.length; i < len;i++){
+                if(media[i] != e.target){
+                    media[i].pause();
+                }
+            }
+        }, true);
+    </script>
 </body>
 
 </html>

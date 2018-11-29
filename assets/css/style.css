@@ -221,9 +221,11 @@ section {
 
 .main-menu .nav-link:hover,
 .mobile-menu .nav-link:hover {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
     color: #ff9000;
 }
+
+/* Navigation menu styling for desktop */
 
 .main-menu .nav-link:after {
     opacity: 0;
@@ -241,77 +243,27 @@ section {
     border: 1px solid black;
 }
 
-.main-menu .nav-link--albums:after {
-    background-color: #660000;
-}
-
 .main-menu .nav-link--albums:hover {
-    color: #660000;
-    background-color: rgba(244, 240, 187, 0.6);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
 
 .main-menu .nav-link--albums.active {
-    background-color: #660000;
-    color: #fff;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
 
-.main-menu .nav-link--music:after {
-    background-color: #990033;
-}
-
-.main-menu .nav-link--music:hover {
-    color: #990033;
-    background-color: rgba(135, 195, 143, 0.6);
-}
-
-.main-menu .nav-link--music.active {
-    background-color: #990033;
-    color: #fff;
-}
-
-.main-menu .nav-link--videos:after {
+.main-menu .nav-link:after {
     background-color: #ff9000;
 }
 
-.main-menu .nav-link--videos:hover {
+.main-menu .nav-link:hover {
     color: #ff9000;
 }
 
-.main-menu .nav-link--videos.active {
+.main-menu .nav-link.active {
     background-color: #ff9000;
-    color: #fff;
-}
-
-.main-menu .nav-link--book:after {
-    background-color: #87c38f;
-}
-
-.main-menu .nav-link--book:hover {
-    color: #87c38f;
-    background-color: rgba(153, 0, 51, 0.6);
-}
-
-.main-menu .nav-link--book.active {
-    background-color: #87c38f;
-    color: #000;
-}
-
-.main-menu .nav-link--gallery:after {
-    background-color: #f4f0bb;
-}
-
-.main-menu .nav-link--gallery:hover {
-    color: #f4f0bb;
-    background-color: rgba(102, 0, 0, 0.6);
-}
-
-.main-menu .nav-link--gallery.active {
-    background-color: #f4f0bb;
-    color: #000;
+    color: #000000;
 }
 
 .main-menu .nav-link:hover:after {
@@ -330,26 +282,6 @@ section {
     background-color: #ff9000;
     min-height: 170px;
     text-align: center;
-}
-
-.page-title-column--albums {
-    background-color: #660000;
-    color: #fafafa;
-}
-
-.page-title-column--music {
-    background-color: #990033;
-    color: #fafafa;
-}
-
-.page-title-column--book {
-    background-color: #87c38f;
-    color: #000;
-}
-
-.page-title-column--gallery {
-    background-color: #f4f0bb;
-    color: #000;
 }
 
 .site-title {
@@ -396,7 +328,7 @@ section {
 }
 
 .social i {
-    color: #fafafa;
+    color: #000000;
 }
 
 /* Expand the social links to the size of their parent list item
@@ -405,10 +337,6 @@ section {
 
 .social li a {
   display: block;
-}
-
-.page-title-column--gallery .social i {
-    color: #000;
 }
 
 .social li:hover {
@@ -421,10 +349,6 @@ section {
   color: #000;
 }
 
-.page-title-column--gallery .social li:hover {
-    background-color: #fafafa;
-}
-
 /* Album page - timeline discography */
 
 .timeline {
@@ -434,7 +358,7 @@ section {
 
 .timeline h3,
 .timeline h4 {
-    color: #660000;
+    color: #000000;
 }
 
 .timeline h5 {
@@ -442,7 +366,7 @@ section {
 }
 
 .timeline i {
-    color: #660000;
+    color: #ff9000;
     font-size: 26px;
     position: absolute;
     left: -14px;
@@ -462,7 +386,7 @@ section {
     box-sizing: border-box;
     margin: 0 0 0 calc(50% - 3px);
     padding: 10px 20px 10px 30px;
-    border-left: 3px dotted #660000;
+    border-left: 3px dotted #ff9000;
     width: 50%;
     background-color: #fff;
     border-top: 2px solid #e1e1e1;
@@ -480,7 +404,7 @@ section {
     margin: 0 50% 0 0;
     padding: 10px 30px 10px 20px;
     text-align: right;
-    border-right: 3px dotted #660000;
+    border-right: 3px dotted #ff9000;
     width: 50%;
 }
 
@@ -488,14 +412,43 @@ section {
     background-color: #f4f0bb;
 }
 
-/* Music section listing - audio and video */
+/* Music section media players - audio and video */
 
 .music-section  {
     padding: 20px 30px;
 }
 
+.music-section .video-container {
+    background-color: #ff9000;
+    border-radius: 15px;
+}
+
+.music-section video {
+    max-width: 100vw;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.music-section .audio-icon {
+    font-size: 20rem;
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: rgba(255, 144, 0, .2);
+}
+
+.music-section .video-icon {
+    font-size: 5rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: rgba(0, 0, 0, .5);
+    z-index: 0;
+}
+
 .music-section .list-group-item:nth-child(odd) {
-  background-color: #f0f0f0;
+    background-color: #f0f0f0;
 }
 
 .music-section .list-group-item i,
