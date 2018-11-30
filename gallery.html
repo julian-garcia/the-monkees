@@ -16,9 +16,11 @@
 <body>
     <header class="container-fluid header-container">
         <div class="row">
-            <!-- Order adjustments: On smaller screens move the navigation menu
-                 just below the title so that the user is aware of the page they're
-                 currently visiting -->
+
+            <!-- Main navigation section with alternately styled wide screen and mobile navigation -->
+            <!-- menus On smaller screens the navigation menu is moved just below the title so     -->
+            <!-- that the user is aware of the page they are currently visiting                    -->
+
             <div class="order-2 order-md-1 col-12 col-md-8 p-0">
                 <div class="band-image">
                     <a href="index.html" class="home-link"></a>
@@ -29,11 +31,18 @@
                         <a class="nav-item nav-link" href="book.html">Book Us</a>
                         <a class="nav-item nav-link active" href="gallery.html">Gallery</a>
                     </nav>
+
+                    <!-- Mobile navigation menu toggle to show and hide the vertical dropdown menu -->
+                    <!-- This is only visible on mobile size viewports                             -->
+
                     <nav class="navbar  d-block d-sm-none text-right navbar--mobile">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggle-mobile-menu" aria-controls="toggle-mobile-menu" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"><i class="fas fa-bars mobile-menu-icon"></i></span>
                         </button>
                     </nav>
+
+                    <!-- This forms the content of the initially collapsed mobile menu -->
+
                     <div class="collapse" id="toggle-mobile-menu">
                         <nav class="d-block d-sm-none nav mobile-menu col-12">
                             <a class="nav-item nav-link" href="albums.html">Albums</a>
@@ -45,8 +54,12 @@
                     </div>
                 </div>
             </div>
-            <!-- Order adjustments: On smaller screens move the title to the top so
-                 that the user is aware of the page they're currently visiting -->
+
+            <!-- Site title and social links section                                       -->
+            <!-- On larger screens, this is situated in the top right corner. On smaller   -->
+            <!-- screens the whole section is moved to the top and covers the whole screen -->
+            <!-- width so that the user is aware of the page they're currently visiting.   -->
+
             <div class="order-1 order-md-2 col-12 col-md-4 page-title-column p-0 ">
                 <h2 class="site-title">The Monkees</h2>
                 <h1 class="page-title">Gallery</h1>
@@ -75,8 +88,14 @@
             </div>
         </div>
     </header>
+
+    <!--  -->
     <main class="container-fluid">
         <section class="gallery-section">
+
+            <!-- Gallery of images in thumbnail form. Each of these will trigger its own -->
+            <!-- corresponding modal to show the full size image.                        -->
+
             <div class="row d-flex justify-content-center">
                 <div class="col-12 col-md-8">
                     <div class="row mb-4">
@@ -95,14 +114,18 @@
                             <img class="img-thumbnail rounded" src="assets/images/band.jpg" data-toggle="modal" data-target="#image4" alt="album" style="width:100%">
                         </div>
                         <div class="col-sm-4">
-                            <img class="img-thumbnail rounded" src="assets/images/dj.jpg" data-toggle="modal" data-target="#image5" alt="album" style="width:100%">
+                            <img class="img-thumbnail rounded" src="assets/images/DavyJones.png" data-toggle="modal" data-target="#image5" alt="album" style="width:100%">
                         </div>
                         <div class="col-sm-4">
-                            <img class="img-thumbnail rounded" src="assets/images/cover.jpg" data-toggle="modal" data-target="#image6" alt="album" style="width:100%">
+                            <img class="img-thumbnail rounded" src="assets/images/theband.jpg" data-toggle="modal" data-target="#image6" alt="album" style="width:100%">
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Initially hidden modals which display the full size image when the  -->
+            <!-- corresponding image in the thumbnail gallery above is clicked on.   -->
+
             <div class="modal fade" id="image1" tabindex="-1" role="dialog" aria-labelledby="image1" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
@@ -143,7 +166,7 @@
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-body">
-                            <img src="assets/images/dj.jpg" alt="album" style="width:100%">
+                            <img src="assets/images/DavyJones.png" alt="album" style="width:100%">
                         </div>
                     </div>
                 </div>
@@ -152,13 +175,14 @@
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-body">
-                            <img src="assets/images/cover.jpg" alt="album" style="width:100%">
+                            <img src="assets/images/theband.jpg" alt="album" style="width:100%">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
     <footer class="container-fluid">
         <div class="row">
             <div class="col-12">
@@ -170,6 +194,7 @@
             </div>
         </div>
     </footer>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>

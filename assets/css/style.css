@@ -14,6 +14,7 @@ h5,
 h6,
 button {
     font-family: 'Dosis', sans-serif;
+    color: #000000;
 }
 
 p,
@@ -56,48 +57,58 @@ section {
     min-height: calc(100vh - 300px);
 }
 
-/* Ensure the home page band members are displayed uniformly
+/* Ensure the home page band members are displayed uniformly 
    and adjust well to various screen sizes                   */
 
 .home-section .home-img-col {
     background-repeat: no-repeat;
     background-size: cover !important;
-    background-position: center left;
+    background-position: 50% 50%;
     max-width: 80%;
-    height: 250px;
+    height: 380px;
     border: 5px solid white;
     border-radius: 20px;
     margin: 5.5rem 10% 1rem 10%;
 }
 
+@media (min-width: 370px) {
+    .home-section .home-img-col {
+        height: 520px;
+    }
+}
+
 @media (min-width: 576px) {
     .home-section .home-img-col {
-        height: 280px;
+        height: 460px;
         margin: 5.5rem 0 1rem 0;
     }
 }
 
 @media (min-width: 992px) {
     .home-section .home-img-col {
-        height: 200px;
+        height: 350px;
     }
 }
 
 .home-section .home-img-col--pt {
-    background: url("../images/pt.jpg");
+    background: url("../images/PeterTork.png");
 }
 
 .home-section .home-img-col--md {
-    background: url("../images/md.jpg");
+    background: url("../images/MickyDolenz.png");
+    -webkit-filter: sepia(50%);
+    filter: sepia(50%);
 }
 
 .home-section .home-img-col--dj {
-    background: url("../images/dj.jpg");
+    background: url("../images/DavyJones.png");
     background-position: left top;
 }
 
 .home-section .home-img-col--mn {
-    background: url("../images/mn.jpg");
+    background: url("../images/MichaelNesmith.png");
+    -webkit-filter: sepia(50%);
+    filter: sepia(50%);
 }
 
 .home-section .band-member-title {
@@ -106,7 +117,7 @@ section {
 }
 
 /* For mobile, move the navigation menu to the very top of the screen
-   to facilitate overall site accessibility on smaller devices */
+   to facilitate overall site accessibility on smaller devices  */
 
 .navbar--mobile {
     position: fixed;
@@ -147,7 +158,7 @@ section {
   color: #fff;
 }
 
-/* Header section - houses: menu, page title and header image */
+/* Header section - contains: navigation menu, site title, page title and header image */
 
 .header-container {
     padding: 0;
@@ -179,7 +190,7 @@ section {
 }
 
 /* Vary the menu styling according to device. Bootstrap takes care
-   of showing hiding the desktop/mobile menu according to screen size
+   of showing hiding the desktop/mobile menu according to the screen size
    of the device */
 
 .main-menu {
@@ -412,7 +423,7 @@ section {
     background-color: #f4f0bb;
 }
 
-/* Music section media players - audio and video */
+/* Music page media players - audio and video */
 
 .music-section  {
     padding: 20px 30px;
@@ -421,12 +432,14 @@ section {
 .music-section .video-container {
     background-color: #ff9000;
     border-radius: 15px;
+    max-width: 100vw;
 }
 
 .music-section video {
-    max-width: 100vw;
+    max-width: 90vw;
     border-radius: 10px;
     z-index: 1;
+    background-color: rgba(0,0,0,.3);
 }
 
 .music-section .audio-icon {
@@ -439,26 +452,12 @@ section {
 }
 
 .music-section .video-icon {
-    font-size: 5rem;
+    font-size: 2.5rem;
     position: absolute;
-    top: 1rem;
-    left: 1rem;
+    top: .5rem;
+    left: .5rem;
     color: rgba(0, 0, 0, .5);
     z-index: 0;
-}
-
-.music-section .list-group-item:nth-child(odd) {
-    background-color: #f0f0f0;
-}
-
-.music-section .list-group-item i,
-.music-section .list-group-item h5  {
-    color:#990033;
-}
-
-.music-section .list-group-item:hover i,
-.music-section .list-group-item:hover h5 {
-    color: #ff9000;
 }
 
 @media (min-width:450px) {
@@ -467,10 +466,16 @@ section {
     }
 }
 
+@media (min-width:992px) {
+    .music-section video {
+        max-width: 45vw;
+    }
+}
+
 /* Book Us - basic styling for the gig booking form */
 
 .book-event-column {
-    background-color: #87c38f;
+    background-color: #ffe1b9;
     padding: 20px 30px;
 }
 
@@ -485,6 +490,23 @@ section {
     line-height: 20px;
 }
 
+.events-icon {
+    position: absolute;
+    font-size: 2rem;
+    right: .5rem;
+    top: .5rem;
+    color: #ff9000;
+}
+
+.event::after {
+    content: "";
+    display: block;
+    width: 90%;
+    padding-bottom: 1rem;
+    margin: 0 0 1rem 0;
+    border-bottom: 2px solid #ff9000;
+}
+
 .book-form-column {
     text-align: center;
     padding: 0 20px;
@@ -497,7 +519,7 @@ section {
 
 .book-button {
     width: 100%;
-    background-color: #87c38f;
+    background-color: #ff9000;
     border: 2px solid transparent;
     color: #000;
     transition: all .5s ease-in-out;

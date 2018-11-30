@@ -16,7 +16,11 @@
 <body>
     <header class="container-fluid header-container">
         <div class="row">
-            
+
+            <!-- Main navigation section with alternately styled wide screen and mobile navigation -->
+            <!-- menus On smaller screens the navigation menu is moved just below the title so     -->
+            <!-- that the user is aware of the page they are currently visiting                    -->
+
             <div class="order-2 order-md-1 col-12 col-md-8 p-0">
                 <div class="band-image">
                     <nav class="nav nav-fill main-menu justify-content-center col-12 col-xl-9 offset-xl-3 d-none d-sm-inline-flex">
@@ -26,11 +30,18 @@
                         <a class="nav-item nav-link" href="book.html">Book Us</a>
                         <a class="nav-item nav-link" href="gallery.html">Gallery</a>
                     </nav>
+
+                    <!-- Mobile navigation menu toggle to show and hide the vertical dropdown menu -->
+                    <!-- This is only visible on mobile size viewports                             -->
+
                     <nav class="navbar  d-block d-sm-none text-right navbar--mobile">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggle-mobile-menu" aria-controls="toggle-mobile-menu" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"><i class="fas fa-bars mobile-menu-icon"></i></span>
                         </button>
                     </nav>
+
+                    <!-- This forms the content of the initially collapsed mobile menu -->
+
                     <div class="collapse" id="toggle-mobile-menu">
                         <nav class="d-block d-sm-none nav mobile-menu col-12">
                             <a class="nav-item nav-link" href="albums.html">Albums</a>
@@ -42,6 +53,11 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Site title and social links section                                       -->
+            <!-- On larger screens, this is situated in the top right corner. On smaller   -->
+            <!-- screens the whole section is moved to the top and covers the whole screen -->
+            <!-- width so that the user is aware of the page they're currently visiting.   -->
 
             <div class="order-1 order-md-2 col-12 col-md-4 page-title-column p-0">
                 <h2 class="site-title">The Monkees</h2>
@@ -72,6 +88,11 @@
         </div>
     </header>
 
+    <!-- Video and audio content - consists of one video embedded in a video player -->
+    <!-- and a few sample songs, also playable directly on the page. A simple       -->
+    <!-- JS script is in place at the bottom of this page to stop any two media     -->
+    <!-- players to play at the same time.                                          -->
+
     <main class="container-fluid pl-0 pr-0">
         <section class="music-section">
             <div class="row d-flex">
@@ -79,12 +100,20 @@
                     <div class="video-container py-2 text-center">
                         <i class="fas fa-video video-icon"></i>
                         <h2 class="text-center">Daydream Believer</h2>
+
+                        <!-- Forcing the playback start time to 1 second from the actual -->
+                        <!-- start to force the player to render a video frame. Without  -->
+                        <!-- this, the video element just displays a small play button.  -->
+
                         <video controls poster="assets/images/logo.png">
-                            <source src="assets/videos/TheMonkees.mp4" type="video/mp4">
+                            <source src="assets/videos/TheMonkees.mp4#t=1" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
                 </div>
+
+                <!-- Audio track listing -->
+
                 <div class="col-12 col-lg-6 col-xl-6 px-4">
                     <i class="fas fa-volume-up audio-icon"></i>
                     <div class="audio-container text-center">
@@ -134,6 +163,7 @@
     <!-- In order to enforce one track/video to be playing at any one time we need    -->
     <!-- to use Javascript to loop through all audio/video elements and stop anything -->
     <!-- else that is already playing                                                 -->
+    
     <script>
         document.addEventListener('play', function(e){
             var media = document.querySelectorAll('video, audio');

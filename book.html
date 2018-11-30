@@ -16,9 +16,11 @@
 <body>
     <header class="container-fluid header-container">
         <div class="row">
-            <!-- Order adjustments: On smaller screens move the navigation menu
-                 just below the title so that the user is aware of the page they're
-                 currently visiting -->
+
+            <!-- Main navigation section with alternately styled wide screen and mobile navigation -->
+            <!-- menus On smaller screens the navigation menu is moved just below the title so     -->
+            <!-- that the user is aware of the page they are currently visiting                    -->
+
             <div class="order-2 order-md-1 col-12 col-md-8 p-0">
                 <div class="band-image">
                     <a href="index.html" class="home-link"></a>
@@ -29,11 +31,18 @@
                         <a class="nav-item nav-link active" href="book.html">Book Us</a>
                         <a class="nav-item nav-link" href="gallery.html">Gallery</a>
                     </nav>
+
+                    <!-- Mobile navigation menu toggle to show and hide the vertical dropdown menu -->
+                    <!-- This is only visible on mobile size viewports                             -->
+
                     <nav class="navbar  d-block d-sm-none text-right navbar--mobile">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#toggle-mobile-menu" aria-controls="toggle-mobile-menu" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"><i class="fas fa-bars mobile-menu-icon"></i></span>
                         </button>
                     </nav>
+
+                    <!-- This forms the content of the initially collapsed mobile menu -->
+
                     <div class="collapse" id="toggle-mobile-menu">
                         <nav class="d-block d-sm-none nav mobile-menu col-12">
                             <a class="nav-item nav-link" href="albums.html">Albums</a>
@@ -45,8 +54,12 @@
                     </div>
                 </div>
             </div>
-            <!-- Order adjustments: On smaller screens move the title to the top so
-                 that the user is aware of the page they're currently visiting -->
+
+            <!-- Site title and social links section                                       -->
+            <!-- On larger screens, this is situated in the top right corner. On smaller   -->
+            <!-- screens the whole section is moved to the top and covers the whole screen -->
+            <!-- width so that the user is aware of the page they're currently visiting.   -->
+
             <div class="order-1 order-md-2 col-12 col-md-4 page-title-column p-0 ">
                 <h2 class="site-title">The Monkees</h2>
                 <h1 class="page-title">Book Us</h1>
@@ -75,37 +88,49 @@
             </div>
         </div>
     </header>
+
+    <!-- Event listing alongside a booking/contact form -->
+
     <main class="container-fluid">
         <section class="book-section">
             <div class="row">
+                
+                <!-- Each event is stacked in responsive grid layout using bootstrap -->
+                <!-- with dummy external links to a well known events based website. -->
+
                 <div class="col-12 col-md-4 book-event-column order-2 order-md-1">
                     <h2 class="mb-4">Upcoming Events</h2>
+                    <i class="fas fa-calendar-alt events-icon"></i>
                     <div class="row">
-                        <div class="col-12 col-sm-6 col-md-12 col-lg-12 col-xl-6 mb-4">
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-12 col-xl-6 mb-4 event">
                             <h4>Event One</h4>
                             <h6>1st Jan 2018</h6>
                             <p>Wembley Stadium</p>
+                            <p>Michael Nesmith And Micky Dolenz Will Tour As A Duo For The First Time</p>
                             <a href="https://www.eventbrite.co.uk" target="_blank" class="badge badge-pill badge-dark">Tickets</a>
                         </div>
-                        <div class="col-12 col-sm-6 col-md-12 col-lg-12 col-xl-6 mb-4">
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-12 col-xl-6 mb-4 event">
                             <h4>Event Two</h4>
                             <h6>1st Feb 2018</h6>
                             <p>Barbican</p>
+                            <p>This Summer, Playing Monkees Music Spanning More Than 50 Years</p>
                             <a href="https://www.eventbrite.co.uk" target="_blank" class="badge badge-pill badge-dark">Tickets</a>
                         </div>
-                        <div class="col-12 col-sm-6 col-md-12 col-lg-12 col-xl-6 mb-4">
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-12 col-xl-6 mb-4 event">
                             <h4>Event Three</h4>
                             <h6>1st Mar 2018</h6>
                             <p>Wembley Stadium</p>
+                            <p>Michael Nesmith and the First National Band Redux</p>
                             <a href="https://www.eventbrite.co.uk" target="_blank" class="badge badge-pill badge-dark">Tickets</a>
                         </div>
-                        <div class="col-12 col-sm-6 col-md-12 col-lg-12 col-xl-6 mb-4">
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-12 col-xl-6 mb-4 event">
                             <h4>Event Four</h4>
                             <h6>1st Apr 2018</h6>
                             <p>Barbican</p>
+                            <p>50th Anniversary</p>
                             <a href="https://www.eventbrite.co.uk" target="_blank" class="badge badge-pill badge-dark">Tickets</a>
                         </div>
-                        <div class="col-12 col-sm-6 col-md-12 col-lg-12 col-xl-6 mb-4">
+                        <div class="col-12 col-sm-6 col-md-12 col-lg-12 col-xl-6 mb-4 event">
                             <h4>Event Five</h4>
                             <h6>1st May 2018</h6>
                             <p>Barbican</p>
@@ -113,6 +138,11 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- This is a non functional dummy contact form intended for booking enquiries. -->
+                <!-- If functionality is added at a later date, any Javascript should be stored  -->
+                <!-- separately in the assets folder.                                            -->
+
                 <div class="col-12 col-md-8 book-form-column order-1 order-md-2">
                     <h2 class="mb-4">Book Us</h2>
                     <form>
@@ -141,6 +171,7 @@
             </div>
         </section>
     </main>
+
     <footer class="container-fluid">
         <div class="row">
             <div class="col-12">
@@ -152,6 +183,7 @@
             </div>
         </div>
     </footer>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
