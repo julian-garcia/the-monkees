@@ -34,6 +34,7 @@ To ensure content readability, sufficient colour contrast of text against the ba
 Used [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjulian-garcia.github.io%2Fthe-monkees%2Findex.html) to identify HTML errors which were  resolved. To test for site responsiveness, browser responsive mode was used to render the site simulating various screen widths. Tested across various browsers including: Safari, Firefox, Chrome and Internet Explorer. Cross browser compatibility can be confirmed by visiting [browsershots.org](http://browsershots.org/) and feeding in the URL `https://julian-garcia.github.io/the-monkees/index.html`. Visual checks were also performed on an Apple iPhone SE and Apple Macbook Pro.
 ### Visual user interface checks
 Various manual checks were carried out to ensure proper website functionality and responsiveness:
+
 Element | Viewport Size | Test | Outcome
 --------|:-------------:|------|:------:
 Links | All | Visit all links to verify that there are no broken internal links and no broken external links to social media pages and album purchase pages | Pass 
