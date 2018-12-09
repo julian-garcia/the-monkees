@@ -34,12 +34,19 @@ To ensure content readability, sufficient colour contrast of text against the ba
 Used [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjulian-garcia.github.io%2Fthe-monkees%2Findex.html) to identify HTML errors which were  resolved. To test for site responsiveness, browser responsive mode was used to render the site simulating various screen widths. Tested across various browsers including: Safari, Firefox, Chrome and Internet Explorer. Cross browser compatibility can be confirmed by visiting [browsershots.org](http://browsershots.org/) and feeding in the URL `https://julian-garcia.github.io/the-monkees/index.html`. Visual checks were also performed on an Apple iPhone SE and Apple Macbook Pro.
 ### Visual user interface checks
 Various manual checks were carried out to ensure proper website functionality and responsiveness:
-- Visited all links to verify that there are no broken internal links and no broken external links to social media pages and amazon purchase pages.  
-- Browser window width enlarged and reduced to check that the structure of each page adjusts gracefully according to the viewport size.
-- Home page: Ensure that the images of the 4 band members scale up and down from mobile through to tablet and desktop
-- Music page: Clicked play on each song and the video to ensure that only one track is played at any one time
-- Book us page: Prioritise booking form. On a desktop, the booking form is displayed after the event listing. On mobile the form must be displayed first as it should be seen first on mobile.
-- Current state: The user should be aware of their current position on the site at all times. Check that each navigation menu item is highlighted as active on the relevant page.
+Element | Viewport Size | Test | Outcome
+--------|:-------------:|------|:------:
+Links | All | Visit all links to verify that there are no broken internal links and no broken external links to social media pages and album purchase pages | Pass 
+Window | All | Browser width enlarged and reduced to check that the structure of each page adjusts gracefully according to the viewport size | Pass
+Images | All | Home page: Ensure that the images of the 4 band members scale up and down from mobile through to tablet and desktop. Image proportions  should be maintained and faces remain main focus | Pass
+Media | All | Music page: Clicked play on each song and the video to ensure that only one track is played at any one time | Pass
+Navigation links | Desktop | Current state: The user should be aware of their current position on the site at all times. Check that each navigation menu item is highlighted as active on the relevant page. | Pass
+Grid | Desktop| Book us page: The booking form is displayed after the event listing (to the right). | Pass
+Navigation | Desktop | Menu items retain contrast on hover as well as highlighted links that indicate the currently active page | Pass
+Grid| Mobile | Book us page: On mobile the booking form must be stacked on top of the event list as it is more important so should appear above the fold. | Pass
+Window | Mobile | User must be unable to scroll horizontally and all content is accessible through vertical scrolling | Pass
+Header | Mobile | Accessibility: Header image is only visible on desktop but not on mobile so as to ensure that page content starts appearing before the fold on mobile | Pass
+Navigation | Mobile | Navigation menu item text to background contrast ratio should be consistent on every page. The ratio should be high for readability. | Pass
 
 ## Deployment & Contributions
 The site was deployed using the [Github Pages](https://pages.github.com) feature of Github which provides a server side address hosed by GitHub in order to render a static website. To contribute to this you'll need to do the following:

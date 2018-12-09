@@ -20,7 +20,8 @@ button {
 p,
 a,
 input,
-textarea {
+textarea,
+select {
     font-family: 'Crimson Text', serif;
 }
 
@@ -458,11 +459,15 @@ section {
     left: .5rem;
     color: rgba(0, 0, 0, .5);
     z-index: 0;
+    display: none;
 }
 
 @media (min-width:450px) {
     .music-section {
         min-height: calc(100vh - 300px);
+    }
+    .music-section .video-icon {
+        display: block;
     }
 }
 

@@ -144,7 +144,6 @@
                 <!-- separately in the assets folder.                                            -->
 
                 <div class="col-12 col-md-8 book-form-column order-1 order-md-2">
-                    <h2 class="mb-4">Book Us</h2>
                     <form>
                         <div class="form-row">
                             <div class="col-12 col-sm-6">
@@ -154,10 +153,15 @@
                                 <input type="text" class="form-control" id="name" placeholder="Full name" required>
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input type="date" class="form-control" id="date" placeholder="Date" required>
+                                <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required>
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input type="time" class="form-control" id="time" placeholder="Time" required>
+                                <select class="form-control" required>
+                                    <option value="" disabled selected>Best Callback Time</option>
+                                    <option value="morning">Morning</option> 
+                                    <option value="afternoon">Afternoon</option>
+                                    <option value="evening">Evening</option>
+                                </select>
                             </div>
                             <div class="col-12">
                                 <textarea class="form-control" id="message" rows="3" placeholder="Enter any further details" required></textarea>
